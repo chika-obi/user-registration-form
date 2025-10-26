@@ -1,0 +1,47 @@
+.step4-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.review-section {
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.review-section h3 {
+  margin-bottom: 8px;
+  color: #007bff;
+}
+
+.review-section p {
+  margin: 2px 0;
+}
+
+.terms-container {
+  margin: 15px 0;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #218838;
+}
