@@ -8,6 +8,8 @@ function Step1Personal({ formData, setFormData, errors, setErrors }) {
     // Update form data
     setFormData({ ...formData, [name]: value });
 
+   
+
     // Real-time validation
     switch (name) {
       case "fullName":

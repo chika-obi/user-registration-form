@@ -1,25 +1,26 @@
 import React from "react";
-import "./FormNavigation.css"; // optional for button styling
+import "./FormNavigation.css";
 
-function FormNavigation({ currentStep, totalSteps, nextStep, prevStep, errors }) {
-  const hasErrors = Object.values(errors).some((err) => err);
-
+function FormNavigation({ currentStep, totalSteps, nextStep, prevStep, isStepValid }) {
   return (
     <div className="form-navigation">
-      {currentStep > 1 && (
-        <button className="form-button form-button-secondary" onClick={prevStep}>
+      {currentStep > 1 ? (
+        <button type="button" className="form-button form-button-secondary" onClick={prevStep}>
           Previous
         </button>
-      )}
-      {currentStep < totalSteps && (
+      ) : <div />}
+
+      {currentStep < totalSteps ? (
         <button
+          type="button"
           className="form-button form-button-primary"
           onClick={nextStep}
-          disabled={hasErrors}
+          disabled={!isStepValid}
+          aria-disabled={!isStepValid}
         >
           Next
         </button>
-      )}
+      ) : null}
     </div>
   );
 }

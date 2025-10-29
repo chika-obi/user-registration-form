@@ -1,0 +1,14 @@
+.background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background:url("/src/assets/bg-pattern.svg") center/cover no-repeat, linear-gradient(135deg, #eff6ff, #eef2ff, #fef9c3);
+  overflow: hidden;
+}
+
+
+
+
